@@ -1,0 +1,89 @@
+quel automate voulez-vous utiliser ? 40
+
+Traceback (most recent call last):
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\main.py", line 21, in <module>
+    AFCD = determinisation_et_completion_automate_synchrone(AF)
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\fonctions.py", line 466, in determinisation_et_completion_automate_synchrone
+    c = completion(b)
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\fonctions.py", line 374, in completion
+    a.transitions.append(A[1][i] + ',' + A[0][j] + ',' + A[i][j])
+IndexError: list index out of range
+Nombre de symboles : 2
+Nombre d'états : 3
+
+Alphabet : a  b  
+
+Etats :
+0 1 2 
+
+Etats Initiaux :
+0 1 
+
+Etats Finaux :
+0 2 
+
+Transitions :
+0,b,1
+0,b,2
+1,a,0
+1,a,2
+1,b,2
+2,a,0
+
+Table de transitions :
+-  -  a  b  
+E+S  0  -  1+2  
+E  1  0+2  2  
+S  2  0  -  
+L'automate est synchrone
+L'automate n'est pas déterministe car il a plusieurs entrées
+L'automate n'est pas déterministe car un état utilise deux fois la même transition
+
+######################
+Automate Déterminisé :
+
+Nombre de symboles : 2
+Nombre d'états : 5
+Alphabet : a  b  
+
+Etats :
+0+1 0+2 1+2 2 0 
+
+Etats Initiaux :
+0+1 
+
+Etats Finaux :
+0+1 0+2 0 0+2 1+2 2 
+
+Transitions :
+0+1,a,0+2
+0+2,a,0
+1+2,a,0+2
+2,a,0
+0+1,b,1+2
+0+2,b,1+2
+1+2,b,2
+0,b,1+2
+
+Table de transitions :
+-  -  a  b  
+E+S  0+1  0+2  1+2  
+S  0+2  0  1+2  
+S  1+2  0+2  2  
+S  2  0  -  
+S  0  -  1+2  
+L'automate n'est pas complet car certaines transitions ne sont pas utilisée
+
+######################
+Automate Complet :
+
+Traceback (most recent call last):
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\main.py", line 21, in <module>
+    AFCD = determinisation_et_completion_automate_synchrone(AF)
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\fonctions.py", line 457, in determinisation_et_completion_automate_synchrone
+    c = completion(b)
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\fonctions.py", line 365, in completion
+    a.transitions.append(A[1][i] + ',' + A[0][j] + ',' + A[i][j])
+IndexError: list index out of range
+
+Process finished with exit code 1

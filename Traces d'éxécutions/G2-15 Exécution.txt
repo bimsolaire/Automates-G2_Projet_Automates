@@ -1,0 +1,47 @@
+quel automate voulez-vous utiliser ? 15
+
+Nombre de symboles : 4
+Nombre d'états : 5
+
+Alphabet : a  b  c  d  
+
+Etats :
+1 2 3 4 0 
+
+Etats Initiaux :
+1 
+
+Etats Finaux :
+4 
+
+Transitions :
+1,a,1
+1,b,2
+1,c,3
+1,d,4
+2,b,2
+2,a,0
+2,c,3
+2,d,4
+3,a,0
+3,b,0
+3,c,3
+3,d,4
+4,a,0
+4,b,0
+4,c,0
+4,d,4
+0,a,0
+
+
+
+Table de transitions :
+
+Traceback (most recent call last):
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\main.py", line 9, in <module>
+    if est_un_automate_asynchrone(AF) == 1:
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\fonctions.py", line 189, in est_un_automate_asynchrone
+    if transition.split(',')[1] == 'epsilon':
+IndexError: list index out of range
+
+Process finished with exit code 1

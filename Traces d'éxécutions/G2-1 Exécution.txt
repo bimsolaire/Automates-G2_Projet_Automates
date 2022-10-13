@@ -1,0 +1,21 @@
+quel automate voulez-vous utiliser ? 1
+
+Nombre de symboles : 0
+Nombre d'états : 1
+
+Alphabet :   
+
+Etats :
+0 
+
+Etats Initiaux :
+0 
+
+Etats Finaux :
+0 
+
+Transitions :
+
+L'alphabet est vide, l'automate n'est pas traitable
+
+Process finished with exit code 0

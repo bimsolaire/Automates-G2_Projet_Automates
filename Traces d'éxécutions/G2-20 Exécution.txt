@@ -1,0 +1,112 @@
+quel automate voulez-vous utiliser ? 20
+
+Nombre de symboles : 4
+Nombre d'états : 9
+
+Alphabet : a  b  c  d  
+
+Etats :
+1 2 3 4 5 6 7 8 0 
+
+Etats Initiaux :
+1 6 7 8 0 
+
+Etats Finaux :
+5 
+
+Transitions :
+1,a,2
+2,b,3
+3,c,4
+4,d,5
+6,a,2
+7,b,3
+8,c,4
+0,d,5
+
+Table de transitions :
+-  -  a  b  c  d  
+E  1  2  -  -  -  
+-  2  -  3  -  -  
+-  3  -  -  4  -  
+-  4  -  -  -  5  
+S  5  -  -  -  -  
+E  6  2  -  -  -  
+E  7  -  3  -  -  
+E  8  -  -  4  -  
+E  0  -  -  -  5  
+L'automate est synchrone
+L'automate n'est pas déterministe car il a plusieurs entrées
+
+######################
+Automate Déterminisé :
+
+Nombre de symboles : 4
+Nombre d'états : 5
+Alphabet : a  b  c  d  
+
+Etats :
+1+6+7+8+0 2 5 4 3 
+
+Etats Initiaux :
+1+6+7+8+0 
+
+Etats Finaux :
+5 
+
+Transitions :
+1+6+7+8+0,a,2
+1+6+7+8+0,b,3
+2,b,3
+1+6+7+8+0,c,4
+3,c,4
+1+6+7+8+0,d,5
+4,d,5
+
+Table de transitions :
+-  -  a  b  c  d  
+E  1+6+7+8+0  2  3  4  5  
+-  2  -  3  -  -  
+S  5  -  -  -  -  
+-  4  -  -  -  5  
+-  3  -  -  4  -  
+L'automate n'est pas complet car certaines transitions ne sont pas utilisée
+
+######################
+Automate Complet :
+
+Nombre de symboles : 4
+Nombre d'états : 5
+Alphabet : a  b  c  d  
+
+Etats :
+1+6+7+8+0 2 5 4 3 
+
+Etats Initiaux :
+1+6+7+8+0 
+
+Etats Finaux :
+5 
+
+Transitions :
+1+6+7+8+0,a,2
+1+6+7+8+0,b,3
+2,b,3
+1+6+7+8+0,c,4
+5,c,4
+1+6+7+8+0,d,5
+4,d,5
+P,a,P
+P,b,P
+P,c,P
+P,d,P
+
+Table de transitions :
+-  -  a  b  c  d  
+E  1+6+7+8+0  2  3  4  5  
+-  2  -  3  -  -  
+S  5  -  -  4  -  
+-  4  -  -  -  5  
+-  3  -  -  -  -  
+
+Process finished with exit code 0

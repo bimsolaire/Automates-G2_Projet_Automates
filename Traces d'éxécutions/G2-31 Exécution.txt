@@ -1,0 +1,135 @@
+quel automate voulez-vous utiliser ? 31
+
+Nombre de symboles : 3
+Nombre d'états : 8
+
+Alphabet : a  b  epsilon  
+
+Etats :
+1 2 3 4 5 6 7 0 
+
+Etats Initiaux :
+0 
+
+Etats Finaux :
+7 
+
+Transitions :
+0,epsilon,1
+0,epsilon,4
+1,a,2
+1,epsilon,3
+2,a,3
+2,b,1
+3,epsilon,7
+3,b,3
+4,b,5
+5,b,6
+6,epsilon,4
+6,epsilon,7
+
+Table de transitions :
+-  -  a  b  epsilon  
+-  1  2  -  3  
+-  2  3  1  -  
+-  3  -  3  7  
+-  4  -  5  -  
+-  5  -  6  -  
+-  6  -  -  4+7  
+S  7  -  -  -  
+E  0  -  -  1+4  
+L'automate est asynchrone
+Transitions Epsilon : ['0,epsilon,1', '0,epsilon,4', '1,epsilon,3', '3,epsilon,7', '6,epsilon,4', '6,epsilon,7']
+
+######################
+Automate Synchronisé :
+
+Nombre de symboles : 2
+Nombre d'états : 8
+
+Alphabet : a  b  
+
+Etats :
+1 2 3 4 5 6 7 0 
+
+Etats Initiaux :
+0 
+
+Etats Finaux :
+7 3 6 1 0 
+
+Transitions :
+1,a,2
+2,a,3
+2,b,1
+3,b,3
+4,b,5
+5,b,6
+0,a,2
+1,b,3
+6,b,5
+0,b,5
+0,b,3
+
+Table de transitions :
+-  -  a  b  
+S  1  2  3  
+-  2  3  1  
+S  3  -  3  
+-  4  -  5  
+-  5  -  6  
+S  6  -  5  
+S  7  -  -  
+E+S  0  2  5+3  
+L'automate n'est pas déterministe car un état utilise deux fois la même transition
+
+######################
+Automate Déterminisé :
+
+Nombre de symboles : 2
+Nombre d'états : 6
+Alphabet : a  b  
+
+Etats :
+0 2 5+3 1 3+6 3+5 
+
+Etats Initiaux :
+0 
+
+Etats Finaux :
+5+3 3+6 3+5 3+6 1 0 
+
+Transitions :
+0,a,2
+2,a,3
+1,a,2
+0,b,5+3
+2,b,1
+5+3,b,3+6
+1,b,3
+3+6,b,3+5
+3+5,b,3+6
+
+Table de transitions :
+-  -  a  b  
+E+S  0  2  5+3  
+-  2  3  1  
+S  5+3  -  3+6  
+S  1  2  3  
+S  3+6  -  3+5  
+S  3+5  -  3+6  
+L'automate n'est pas complet car certaines transitions ne sont pas utilisée
+
+######################
+Automate Complet :
+
+Traceback (most recent call last):
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\main.py", line 10, in <module>
+    AFDC = determinisation_et_completion_automate_asynchrone(AF)
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\fonctions.py", line 431, in determinisation_et_completion_automate_asynchrone
+    d = completion(c)
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\fonctions.py", line 365, in completion
+    a.transitions.append(A[1][i] + ',' + A[0][j] + ',' + A[i][j])
+IndexError: list index out of range
+
+Process finished with exit code 1

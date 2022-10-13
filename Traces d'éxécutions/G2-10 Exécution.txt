@@ -1,0 +1,47 @@
+quel automate voulez-vous utiliser ? 10
+
+Nombre de symboles : 2
+Nombre d'états : 5
+
+Alphabet : a  b  
+
+Etats :
+0 1 2 3 4 
+
+Etats Initiaux :
+0 
+
+Etats Finaux :
+0 
+
+Transitions :
+0,a,1
+1,a,2
+1,b,2
+2,a,3
+3,a,4
+3,b,4
+4,a,0
+
+Table de transitions :
+-  -  a  b  
+E+S  0  1  -  
+-  1  2  2  
+-  2  3  -  
+-  3  4  4  
+-  4  0  -  
+L'automate est synchrone
+L'automate est déterministe
+L'automate n'est pas complet car certaines transitions ne sont pas utilisée
+
+######################
+Automate Complet :
+
+Traceback (most recent call last):
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\main.py", line 19, in <module>
+    AFCD = completion(AF)
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\fonctions.py", line 358, in completion
+    a.transitions.append(A[1][i] + ',' + A[0][j] + ',' + A[i][j])
+IndexError: list index out of range
+
+Process finished with exit code 1

@@ -1,0 +1,43 @@
+quel automate voulez-vous utiliser ? 33
+
+Nombre de symboles : 4
+Nombre d'états : 13
+
+Alphabet : a  b  c  epsilon  
+
+Etats :
+0 1 2 3 4 5 6 7 8 9 10 11 12 
+
+Etats Initiaux :
+0 
+
+Etats Finaux :
+12 
+
+Transitions :
+0,epsilon,1
+0,epsilon,7
+1,epsilon,2
+1,epsilon,4
+2,a,3
+3,epsilon,5
+4,epsilon,5
+4,b,4
+5,c,6
+6,epsilon,12
+7,epsilon,8
+7,epsilon,9
+8,epsilon,11
+8,a,8
+9,b,10
+10,epsilon,11
+11,c,11
+11,epsilon,12
+
+Table de transitions :
+    table(a)
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\fonctions.py", line 106, in table
+    A[i][1] = etat
+IndexError: list index out of range
+
+Process finished with exit code 1

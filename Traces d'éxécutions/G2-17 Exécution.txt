@@ -1,0 +1,99 @@
+quel automate voulez-vous utiliser ? 17
+
+Nombre de symboles : 4
+Nombre d'états : 6
+
+Alphabet : a  b  c  d  
+
+Etats :
+0 1 2 3 4 5 
+
+Etats Initiaux :
+1 2 3 4 
+
+Etats Finaux :
+5 
+
+Transitions :
+1,a,1
+1,a,2
+2,b,2
+2,b,3
+3,c,3
+3,c,4
+4,d,4
+4,d,5
+5,a,0
+5,b,0
+5,c,0
+5,d,0
+
+Table de transitions :
+-  -  a  b  c  d  
+-  0  -  -  -  -  
+E  1  1+2  -  -  -  
+E  2  -  2+3  -  -  
+E  3  -  -  3+4  -  
+E  4  -  -  -  4+5  
+S  5  0  0  0  0  
+L'automate est synchrone
+L'automate n'est pas déterministe car il a plusieurs entrées
+L'automate n'est pas déterministe car un état utilise deux fois la même transition
+
+######################
+Automate Déterminisé :
+
+Nombre de symboles : 4
+Nombre d'états : 6
+Alphabet : a  b  c  d  
+
+Etats :
+1+2+3+4 1+2 3+4 0 4+5+0 2+3 
+
+Etats Initiaux :
+1+2+3+4 
+
+Etats Finaux :
+4+5+0 
+
+Transitions :
+1+2+3+4,a,1+2
+1+2,a,1+2
+4+5,a,0
+4+5+0,a,0
+1+2+3+4,b,2+3
+1+2,b,2+3
+4+5,b,0
+4+5+0,b,0
+2+3,b,2+3
+1+2+3+4,c,3+4
+4+5,c,0
+4+5+0,c,0
+2+3,c,3+4
+1+2+3+4,d,4+5
+4+5,d,4+5+0
+4+5+0,d,4+5+0
+
+Table de transitions :
+-  -  a  b  c  d  
+E  1+2+3+4  1+2  2+3  3+4  4+5  
+-  1+2  1+2  2+3  -  -  
+-  3+4  -  -  -  -  
+-  0  -  -  -  -  
+S  4+5+0  0  0  0  4+5+0  
+-  2+3  -  2+3  3+4  -  
+L'automate n'est pas complet car certaines transitions ne sont pas utilisée
+
+######################
+Automate Complet :
+
+Traceback (most recent call last):
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\main.py", line 21, in <module>
+    AFCD = determinisation_et_completion_automate_synchrone(AF)
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\fonctions.py", line 466, in determinisation_et_completion_automate_synchrone
+    c = completion(b)
+  File "C:\Users\yidir\PycharmProjects\Projet Automates\fonctions.py", line 374, in completion
+    a.transitions.append(A[1][i] + ',' + A[0][j] + ',' + A[i][j])
+IndexError: list index out of range
+
+Process finished with exit code 1

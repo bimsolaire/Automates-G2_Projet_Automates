@@ -1,0 +1,48 @@
+quel automate voulez-vous utiliser ? 2
+
+Nombre de symboles : 1
+Nombre d'états : 1
+
+Alphabet : a  
+
+Etats :
+0 
+
+Etats Initiaux :
+0 
+
+Etats Finaux :
+0 
+
+Transitions :
+0,a,0
+
+Table de transitions :
+-  -  a  
+E+S  0  0  
+L'automate est synchrone
+L'automate est déterministe
+L'automate est complet
+
+Nombre de symboles : 1
+Nombre d'états : 1
+
+Alphabet : a  
+
+Etats :
+0 
+
+Etats Initiaux :
+0 
+
+Etats Finaux :
+0 
+
+Transitions :
+0,a,0
+
+Table de transitions :
+-  -  a  
+E+S  0  0  
+
+Process finished with exit code 0
